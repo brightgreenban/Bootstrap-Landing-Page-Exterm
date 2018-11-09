@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Scada');
+
+body{
+  background-color: #fff;
+  font-family: 'Scada';
+  font-weight: 500;
+}
+h1, h2, h3 {
+  color: #f4f5f9;
+  text-align: center;
+}
+h3 {
+  color: #21254B;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-weight: 700;
+}
+h4 {
+  color: #21254B;
+  text-align: left;
+}
+hr {
+  background-color: #21254B;
+  color: #21254B;
+  width: 100%;
+}
+p {
+  font-size: 14px;
+  color: rgba(33,37,41, .8);
+  font-weight: 500;
+}
+.tittle-simple {
+  text-align: center!important;
+  text-transform: uppercase;
+}
+.logo-img {
+  max-height: 36px;
+}
+/* HEADER
+---------------------------------------------------------------------- */
+.header {
+  background: linear-gradient(to top, #30366B 20%, #21254B 80%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bg-light {
+  background: transparent!important;
+}
+.navbar-light .navbar-nav .nav-link {
+  padding-left: 30px;
+  color: #f4f5f9!important;
+}
+a.nav-item.nav-link:hover {
+  transition: .7s;
+  color: #ACACAC!important;
+}
+.navbar-light .navbar-brand {
+  color: #f4f5f9!important;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url(http://uzbek-rest.ru/img/mobile-menu-button.png);
+}
+/* HEADER  IMAGE
+---------------------------------------------------------------------- */
+.header-image {
+  padding-top: 180px;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(../img/header1.png);
+}
+.header-form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.header__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.form-text {
+  color: #f4f5f9;
+  text-align: center;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #21254B;
+  border-color: #21254B;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #30366B;
+  border-color: #30366B;
+  transition: 0.7s;
+}
+.header__tittle {
+  padding-bottom: 30px;
+}
+/* ABOUT US
+---------------------------------------------------------------------- */
+.info__block {
+  min-height: 220px;
+  display: inline-block;
+}
+.info__block::last-child {
+  padding-left: 100px;
+  min-height: 200px;
+}
+.info__img {
+
+}
+.info__text {
+  padding-left: 35%;
+}
+
+.info__tittle {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* WHY BLOCK
+---------------------------------------------------------------------- */
+.why {
+  margin-top: -60px;
+  text-align: center;
+}
+.why__img {
+  max-width: 128px;
+  max-height: 128px;
+  padding: 0 auto;
+}
+.why__block__tittle {
+  font-weight: 700;
+  padding-top: 30px;
+  min-height: 80px;
+}
+
+@media (max-width: 976px) { 
+  h3 {
+    font-size: 24px;
+  }
+}
+/* GOODS
+---------------------------------------------------------------------- */
+.goods__img {
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  min-width: 200px;
+}
+.goods-block {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+a.tab-item.nav-link {
+  text-decoration: none;
+  color: #f4f5f9;
+  background-color: #30366B;
+  margin-right: 0px;
+}
+a.tab-item.nav-link:hover {
+  color: #f4f5f9;
+  background-color: #21254B;
+  transition: 0.7s;
+}
+.tab-item.nav-link.active {
+  background-color: #21254B;
+  color: #f4f5f9;
+}
+.nav-link, .nav-tabs {
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.nav-tabs .nav-link:hover {
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.nav-tabs .nav-link {
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.nav-center {
+  display: block;
+}
+
+/* WARNING
+---------------------------------------------------------------------- */
+.warning {
+  color: #f4f5f9;
+  background: linear-gradient(to top, #30366B 20%, #21254B 80%);
+  padding-bottom: 30px;
+}
+.warning__tittle {
+  color: #f4f5f9;
+  margin-bottom: -30px;
+}
+.warning__text {
+  color: #f4f5f9;
+}
+
+/* FAQ
+---------------------------------------------------------------------- */
+.faq__text {
+  padding-bottom: 30px;
+  color: rgba(33,37,41, .6)
+}
+.faq__img {
+ margin: 0;
+ padding: 0;
+}
+.faq__content {
+  height: 330px;
+}
+/* CONTACTS
+---------------------------------------------------------------------- */
+.contact__info, .contact__tittle {
+  text-align: center;
+}
+.contact__tittle {
+  padding-bottom: 10px;
+}
+.contact__subtittle {
+  padding-bottom: 40px;
+}
+/* FOOTER
+---------------------------------------------------------------------- */
+footer {
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: linear-gradient(to top, #30366B 20%, #21254B 80%);
+}
+.footer__left {
+  text-align: left;
+}
+.footer__right {
+  text-align: right;
+}
+.footer__right>p, .footer__left>p {
+  color: #f4f5f9;
+  margin-bottom: 5px;
+}
+/* PRELOADER
+---------------------------------------------------------------------- */
+#cube-loader {
+  background-color: #f4f5f9;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+}
+#cube-loader .caption {
+  margin: 0 auto;
+}
+#cube-loader .cube-loader {
+  width: 73px;
+  height: 73px;
+  margin: 0 auto;
+  margin-top: 49px;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+#cube-loader .cube-loader .cube {
+  position: relative;
+  transform: rotateZ(45deg);
+  width: 50%;
+  height: 50%;
+  float: left;
+  transform: scale(1.1);
+}
+#cube-loader .cube-loader .cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #21254B;
+  animation: cube-loader 2.76s infinite linear both;
+  transform-origin: 100% 100%;
+}
+#cube-loader .cube-loader .loader-2 {
+  transform: scale(1.1) rotateZ(90deg);
+}
+#cube-loader .cube-loader .loader-3 {
+  transform: scale(1.1) rotateZ(180deg);
+}
+#cube-loader .cube-loader .loader-4 {
+  transform: scale(1.1) rotateZ(270deg);
+}
+#cube-loader .cube-loader .loader-2:before {
+  animation-delay: 0.35s;
+}
+#cube-loader .cube-loader .loader-3:before {
+  animation-delay: 0.69s;
+}
+#cube-loader .cube-loader .loader-4:before {
+  animation-delay: 1.04s;
+}
+
+@keyframes cube-loader {
+  0%, 10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .h2, h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .info__img {
+    max-width: 92px;
+    max-height: 92px;
+  }
+  .why__block > p {
+    font-size: 12px;
+  }
+  .why__block__tittle {
+    font-weight: 700;
+    padding-top: 10px;
+    min-height: 50px;
+    font-size: 18px;
+  }
+  .info__tittle {
+    font-size: 18px;
+  }
+}
+
