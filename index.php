@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Exterm / Теплые полы</title>
+	<title>Easyterm / Теплые полы</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="shortcut icon" href="img/icon.png" type="image/png">
 </head>
 <body>
@@ -30,7 +31,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" href="javascript://0" onclick="scrolling('#main')">
 							<img src="http://www.gentherm.com/sites/all/themes/gentherm2016/images/footer-logo-gentherm.png" alt="Easytherm" class="logo-img">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,8 +64,9 @@
 					<h2>Теплый пол Easyterm – холод дома отменяется. Easytherm - искусство согревать.</h2>
 					<form class="header-form">
 						<div class="form-group">
-							<label for="exampleInputEmail1" class="form-text">Введите телефонный номер, и наш менеджер свяжется с Вами</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="+38 (050) 333-50-50">
+							<label for="123" class="form-text">Введите телефонный номер, и наш менеджер свяжется с Вами</label>
+							<input type="text" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+38 (050) 333-50-50"
+							pattern="/\+\d{38}\(\d{3}\)\d{3}-\d{4}" maxlength="12">
 						</div>
 						<button type="submit" class="btn btn-primary header__btn">Отправить</button>
 					</form>
@@ -229,20 +231,69 @@
 		</div>
 	</div>
 </section>
+<!-- POPUP NOT RESPONS YET
+	------------------------------------------------------------------------------------------->
+	<div class="popup_overlay"></div>
+	<div class="popup">
+		<div class="popup_title">
+			Заказать <?=$value['name']?>
+			<span class="closer">x</span>
+		</div>
+		<div class="popup_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 popup_text">
+						<input type='hidden' name='id' value="<?=$value[0]?>">
+						<img src="../img/<?=$value['image']?>" alt="Терморегуляторы" class="img-fluid"/>
+						<h5><?=$value['name']?></h5>
+						<h5>от <?=$value['price']?> грн</h5>
+						<h6>
+							Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переписали правилами безопасную подпоясал эта скатился грамматики она меня своих составитель lorem заманивший маленькая, имеет снова. Курсивных осталось большого своих.
+						</h6>
+					</div>
+					<div class="col-lg-6">
+						<form class="header-form form-popup">
+						<div class="form-group">
+							<h5>Для заказа введи телефонный номер и наши менеджеры перезвонят Вам</h5>
+							<input type="text" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+38 (050) 333-50-50"
+							pattern="/\+\d{38}\(\d{3}\)\d{3}-\d{4}" maxlength="12">
+						</div>
+						<button type="submit" class="btn btn-primary header__btn">Отправить</button>
+					</form>
+					<div class="popup-info">
+						<h5>
+							Технические данные:
+						</h5>
+						<li>Напряжение сети: 230 В.</li>
+						<li>Удельная мощность: 18 Вт/м пог.</li>
+						<li>Толщина кабеля: 3 мм.</li>
+						<li>Макс. рабочая температура: 80° С.</li>
+						<li>Изоляция греющих жил: тефлон ФЭП.</li>
+						<li>Наружная изоляция: ПВХ.</li>
+						<li>Кабель для подключения к сети: 2 м.</li>
+						<li>Гарантия от производителя: 20 лет.</li>
+						<li>Производитель: Rak&Co (Латвия)</li>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <!-- WARNING
 	------------------------------------------------------------------------------------------->
 	<section class="warning">
 		<a id="warning"></a>
 		<div class="container">
 			<div class="row">
-				<div class="col-2 col-lg-2"></div>
-				<div class="col-8 col-lg-8 tittle-simple">
+				<div class="col-1 col-lg-2"></div>
+				<div class="col-10 col-lg-8 tittle-simple">
 					<h3 class="warning__tittle">Обратите внимание!</h3>
 					<p class="warning__text">
 						Вы получаете максимально полное сопровождение: оптимальную цену, оперативную отгрузку со склада, квалифицированную консультацию и правильный подбор оборудования, профессиональный монтаж, гарантийное и послегарантийное обслуживание
 					</p>
 				</div>
-				<div class="col-2 col-lg-2"></div>
+				<div class="col-1 col-lg-2"></div>
 			</div>
 		</div>
 	</section>
@@ -262,14 +313,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" alt="ASK IMAGE" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5 faq__content">
 					<h4>Почему тонкие нагревательные маты Easytherm лучше и надежнее?</h4>
 					<p class="faq__text">Преимущества системы тонких матов в том, что она не требует толстой бетонной стяжки, а значит не надо проводить глобальную реконструкцию помещения и не требуется больших денежных вложений для подготовки пола и монтажа системы. При подогреве пола достаточно положить систему на старое кафельное покрытие или ровный бетонный пол. Далее следует уложить сверху кафель или другое напольное покрытие. При этом не требуется укладывать теплоизоляцию. Уровень подъема пола в данном случае 3-5 мм.</p>
 				</div>
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5 faq__content">
 					<h4>Есть ли негативное воздействие электромагнитного излучения?</h4>
@@ -277,28 +328,28 @@
 				</div>
 
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5">
 					<h4>Где и как производятся теплые системы Easytherm?</h4>
 					<p class="faq__text">Производятся и собираются системы обогрева компанией Rak&Co LTD на территории ЕС, в Латвии. Только после прохождения системой многократного тестирования, она допускается к эксплуатации. Rak&Co LTD гарантирует безупречную работу системы в течение 20 лет. При правильном монтаже и эксплуатации фактический срок службы сопоставимым со сроком службы того помещения, в котором установлена система.</p>
 				</div>
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5">
 					<h4>Можно ли использовать систему «Теплый пол» в помещениях с повышенной влажностью?</h4>
 					<p class="faq__text">Возможность использования в помещениях с повышенной влажностью определяется наличием у кабеля экрана (контур заземления) и герметичностью соединительных муфт. Все нагревательные системы Easytherm соответствуют этим требованиям. При установке систем «теплый пол» во влажных помещениях, обязательна установка УЗО (устройство защитного отключения), что защитит от поражения электрическим током (проконсультируйтесь с профессиональным электриком).</p>
 				</div>
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5">
 					<h4>Какое чистовое покрытие предпочтительнее для систем «Теплый пол»?</h4>
 					<p class="faq__text">Все покрытия имеют свои плюсы и минусы. Например, поверхность теплого пола с покрытием из керамической плитки быстрее остальных набирает заданную температуру. Лучше и быстрее передает тепло ступням. В тоже время такое покрытие имеет свойство быстро остывать. Наоборот, ковровое покрытие позволяет функционировать системе в 1,5 - 2 раза экономичнее. Но после старта системы требуется в 2 раза больше времени, чтобы почувствовать эффект нагрева.</p>
 				</div>
 				<div class="col-2 col-lg-1 faq__img">
-					<img src="https://image.flaticon.com/icons/svg/309/309213.svg" alt="ASK IMAGE" class="faq__img">
+					<img src="img/faq.png" class="faq__img">
 				</div>
 				<div class="col-10 col-lg-5">
 					<h4>Какое чистовое покрытие предпочтительнее для систем «Теплый пол»?</h4>
@@ -313,32 +364,32 @@
 	<section class="contact">
 		<div class="container">
 			<div class="row">
-				<div class="col-2 col-lg-2"></div>
-				<div class="col-8 col-lg-8 tittle-simple">
+				<div class="col-1 col-lg-2"></div>
+				<div class="col-10 col-lg-8 tittle-simple">
 					<h3 class="contact__tittle">Контакты</h3>
 					<h6 class="contact__subtittle">Официальная гарантия на нагревательные элементы EASYTHERM от завода-изготовителя 20 лет. Гарантийное обслуживание на территории Украины поддерживает сеть сервисных центров: </h6>
 				</div>
-				<div class="col-2 col-lg-2"></div>
+				<div class="col-1 col-lg-2"></div>
 			</div>
 		</div>
 		<div id="map" style="width: 100%; height: 500px; margin-bottom: 30px;"></div>
 		<div class="container contact__info">
-			<div class="row">
-				<div class="col-12 col-lg-4">
+			<div class="row justify-content-center">
+				<div class="col-6 col-lg-4">
 					<h4 class="contact__tittle">Киев</h4>
 					<p>г. Киев, пр-т Григоренко, 15</p>
 					<p>ООО "ТЕПЛОКАБЕЛЬ"</p>
 					<p>тел. +38-050-442-90-44</p>
 					<p>почта: tep.poly@ukr.net</p>
 				</div>
-				<div class="col-12 col-lg-4">
+				<div class="col-6 col-lg-4">
 					<h4 class="contact__tittle">Одесса</h4>
 					<p>г. Одесса, пр-т Григоренко, 15</p>
 					<p>ООО "ТЕПЛОКАБЕЛЬ"</p>
 					<p>тел. +38-050-442-90-44</p>
 					<p>почта: tep.poly@ukr.net</p>
 				</div>
-				<div class="col-12 col-lg-4">
+				<div class="col-6 col-lg-4">
 					<h4 class="contact__tittle">Львов</h4>
 					<p>г. Львов, пр-т Григоренко, 15</p>
 					<p>ООО "ТЕПЛОКАБЕЛЬ"</p>
@@ -406,13 +457,13 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 footer__left">
+				<div class="col-6 col-lg-6 footer__left">
 					<p>65039, Украина, г. Одесса</p>
 					<p>ул. Слепнева, 2</p>
 
 					<p>Тел. +38 (050) 333-59-03</p>
 				</div>
-				<div class="col-lg-6 footer__right">
+				<div class="col-6 col-lg-6 footer__right">
 					<p> </p>
 					<p>Все права защищены</p>
 					<p>© 2018 "Extherm" </p>
@@ -420,11 +471,11 @@
 			</div>
 		</div>
 	</footer>
-
 <!-- LIBS
 	------------------------------------------------------------------------------------------->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/jquery.magnific-popup.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemFqOQza7lf831yjabpABczJ3NOlGzaI&callback=initMap"></script>
 	<script src="scripts/main.js"></script>

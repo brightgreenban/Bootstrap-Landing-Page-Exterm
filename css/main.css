@@ -6,20 +6,24 @@ body{
   font-family: 'Scada';
   font-weight: 500;
 }
+
 h1, h2, h3 {
   color: #f4f5f9;
   text-align: center;
 }
+
 h3 {
   color: #21254B;
   padding-top: 50px;
   padding-bottom: 50px;
   font-weight: 700;
 }
+
 h4 {
   color: #21254B;
   text-align: left;
 }
+
 hr {
   background-color: #21254B;
   color: #21254B;
@@ -30,10 +34,19 @@ p {
   color: rgba(33,37,41, .8);
   font-weight: 500;
 }
+
+a {
+  color: #21254B;
+}
+a:hover {
+  color: #30366B;
+  text-decoration: none;
+}
 .tittle-simple {
   text-align: center!important;
   text-transform: uppercase;
 }
+
 .logo-img {
   max-height: 36px;
 }
@@ -209,8 +222,10 @@ a.tab-item.nav-link:hover {
   color: rgba(33,37,41, .6)
 }
 .faq__img {
- margin: 0;
- padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .faq__content {
   height: 330px;
@@ -319,6 +334,57 @@ footer {
   }
 }
 
+/* POPUP
+---------------------------------------------------------------------- */
+
+.popup_overlay {
+  display: none;
+  background: rgba(0, 0, 0, .7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.popup {
+  display: none;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  max-width: 95vh;
+  max-height: 95vh;
+  position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+
+.popup_title {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.popup_content {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.closer {
+  float: right;
+  cursor: pointer;
+}
+
+.popup_text {
+  text-align: center;
+}
+.popup-info {
+  margin-top: 30px;
+}
+/* MEDIA
+---------------------------------------------------------------------- */
 @media (max-width: 768px) {
   p {
     font-size: 12px;
@@ -351,5 +417,11 @@ footer {
   .info__tittle {
     font-size: 18px;
   }
+  .nav {
+    display: block!important;
+  }
+  .goods-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
+}

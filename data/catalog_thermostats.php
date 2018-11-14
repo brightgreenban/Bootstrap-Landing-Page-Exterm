@@ -29,7 +29,7 @@ foreach($goods as $key => $value) {
 			<img src="../img/<?=$value['image']?>" alt="Терморегуляторы" class="goods__img"/>
 			<h5><?=$value['name']?></h5>
 			<h5>от <?=$value['price']?> грн</h5>
-			<button type="button" class="btn btn-primary btn-sm">Заказать</button>
+			<button type="button" class="btn btn-primary btn-sm btn-popup">Заказать</button>
 			<!--<p class="goods-btn"><a id="buy-url" href="#">Buy</a></p>-->
 		</div>
 	</div>
